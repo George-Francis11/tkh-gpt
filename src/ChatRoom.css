@@ -21,8 +21,27 @@
     width: 100%;
     box-shadow: rgb(0 0 0/ 35%) 0px 5px 5px 2px;
 }
+.received>span{
+    color: black;
+    background: #e5e5ea none repeat scroll 0 0;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-left: 4.5rem;
+    padding: 1rem;
+    width: 100%;
+    box-shadow: rgb(0 0 0/ 35%) 0px 5px 5px 2px;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    max-width: 500px;
+    display: block;
+    word-wrap:break-word;
+    white-space: normal;
+}
 
 p{
+    overflow-wrap: break-word;
+}
+span{
     overflow-wrap: break-word;
 }
 .sent{

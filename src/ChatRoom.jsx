@@ -2,13 +2,16 @@ import React, { useRef, useState } from 'react';
 import ChatMessage from './ChatMessage';
 import getPrediction from './utils/getPrediction';
 import './ChatRoom.css';
+import Typed from 'react-typed';
 
 
 function ChatRoom() {
   const dummy = useRef();
   const [messages, setMessages] = useState([
-    { sender: 'bot', text: 'Hello! I am TKH-GPT. I am a chatbot designed to help you through answering your questions and concerns regarding TKH Universities' },
-    { sender: 'bot', text: 'I am still in development, so please be patient with me. I am still learning.' },
+    {
+      sender: 'bot',
+      text: 'Hello! I am TKH-GPT. I am a chatbot designed to help you through answering your questions and concerns regarding TKH Universities\nI am still in development, so please be patient with me. I am still learning.'
+    },
   ]);
   const [userMessage, setUserMessage] = useState('');
   const [loading, setLoading] = useState(false);
@@ -20,6 +23,7 @@ function ChatRoom() {
     setUserMessage('');
     messages.push({ sender: 'user', text: usmessage });
     setLoading(true);
+    dummy.current.scrollIntoView({ behavior: 'smooth' });
     const data = await getPrediction(usmessage);
     var result = data.result;
     if (result.includes('A:')) {
@@ -37,7 +41,8 @@ function ChatRoom() {
       <div className='ChatRoom'>
       <main>
         {messages && messages.length > 0 && messages.map(msg => <ChatMessage msg = {msg} />)}
-        {loading && <p>Thinking about an answer...</p>}
+        {loading && <ChatMessage msg = {{sender: 'bot', text: "<typing>"}} />
+        }
       <span ref={dummy}></span>
 
     </main>
