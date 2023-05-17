@@ -26,12 +26,6 @@ function ChatRoom() {
     dummy.current.scrollIntoView({ behavior: 'smooth' });
     const data = await getPrediction(usmessage);
     var result = data.result;
-    if (result.includes('A:')) {
-        result = result.substring(result.indexOf('A:'));
-    }
-    else {
-        result = 'A: ' + result;
-    }
     messages.push({ sender: 'bot', text: result });
     setLoading(false);
     dummy.current.scrollIntoView({ behavior: 'smooth' });
