@@ -8,7 +8,6 @@ function ChatMessage(props) {
 
   return (
     <div className={`message ${messageClass}`}>
-      // load the icon based on the sender
       <img src = {messageClass == 'received'? '/bot.png' : '/user.png'} />
       <p>{text}</p>
         </div>

@@ -1,5 +1,5 @@
 .received>img {
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 50px;
     float: left;
 }
@@ -15,11 +15,11 @@
     color: black;
     background: #e5e5ea none repeat scroll 0 0;
     border-radius: 10px;
-    font-size: 14px;
-    margin-left: 4rem;
+    font-size: 15px;
+    margin-left: 4.5rem;
     padding: 1rem;
     width: 100%;
-    box-shadow: rgb(0 0 0/ 25%) 0px 5px 5px 2px;
+    box-shadow: rgb(0 0 0/ 35%) 0px 5px 5px 2px;
 }
 
 p{
@@ -37,7 +37,7 @@ p{
     background: #0b93f6 none repeat scroll 0 0;
     border-radius: 10px;
     font-size: 14px;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     padding: 1rem;
     width: 100%;
     box-shadow: rgb(0 0 0/ 25%) 0px 5px 5px 2px;
@@ -45,7 +45,7 @@ p{
 }
 
 .sent>img{
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 50px;
     float: right;
 }
@@ -53,12 +53,14 @@ p{
 
 main {
   padding: 10px;
+  width: 100%;
   height: 80vh;
   margin: 10vh 0 10vh;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   overflow: auto;
+  background-color: white;
 }
 
 main::-webkit-scrollbar {
@@ -66,7 +68,7 @@ main::-webkit-scrollbar {
 }
 
 main::-webkit-scrollbar-track {
-  background: #1e1e24;
+  background: white;
 }
 
 main::-webkit-scrollbar-thumb {
@@ -74,7 +76,7 @@ main::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: #282c34;
+  background-color: white;
 }
 
 
@@ -82,32 +84,26 @@ form {
   height: 10vh;
   position: fixed;
   bottom: 0;
-  background-color: rgb(24, 23, 23);
+  background-color: #9b9bcc;
   width: 100%;
-  max-width: 728px;
   display: flex;
   font-size: 1.5rem;
 }
 
-form button {
-  width: 20%;
-  background-color: rgb(56, 56, 143);
-}
-
-
-input {
+form>input {
   line-height: 1.5;
   width: 100%;
   font-size: 1.5rem;
-  background: rgb(58, 58, 58);
-  color: white;
+  background: #9b9bcc;
+  color: black;
   outline: none;
   border: none;
   padding: 0 10px;
 }
 
-button {
-  background-color: #282c34; /* Green */
+form>button {
+  width: 10%;
+  background-color: black;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -118,10 +114,15 @@ button {
   font-size: 1.25rem;
 }
 
-button:disabled {
-  opacity: 0.5;
+form>button:disabled {
+  background-color: grey;
   cursor: not-allowed;
 }
+
+
+
+
+
 
 p {
   max-width: 500px;

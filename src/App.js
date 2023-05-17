@@ -6,7 +6,7 @@ function App() {
     
     <div className="App">
       <header>
-        <h1>TKH-GPT⚛️🔥💬</h1>
+        <h1>TKH-GPT</h1>
       </header>
       <section>
         <ChatRoom />

@@ -6,7 +6,10 @@ import './ChatRoom.css';
 
 function ChatRoom() {
   const dummy = useRef();
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([
+    { sender: 'bot', text: 'Hello! I am TKH-GPT. I am a chatbot designed to help you through answering your questions and concerns regarding TKH Universities' },
+    { sender: 'bot', text: 'I am still in development, so please be patient with me. I am still learning.' },
+  ]);
   const [userMessage, setUserMessage] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -43,7 +46,7 @@ function ChatRoom() {
 
       <input value={userMessage} onChange={(e) => setUserMessage(e.target.value)} placeholder="Ask me something..." />
 
-      <button type="submit" disabled={!userMessage}>🕊️</button>
+      <button type="submit" disabled={!userMessage}>Send</button>
 
       </form>
       </div>

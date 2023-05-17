@@ -4,6 +4,7 @@ const predictionEndPoint = process.env.REACT_APP_BACKEND_ENDPOINT + "/predict";
 const testEndPoint = process.env.REACT_APP_BACKEND_ENDPOINT + "/test";
 const getPrediction = async (data) => {
     try {
+        console.log(predictionEndPoint);
         const url = `${predictionEndPoint}`;
         const response = await axios({
             method: 'post',
@@ -18,17 +19,5 @@ const getPrediction = async (data) => {
         console.log(error);
     }
 }
-
-
-
-// const fakePrediction = async (data) => {
-//     const response = await {
-//         data: {
-//             result: "Hello World"
-//         }
-//     }
-//     return response.data;
-// }
-
 
 export default getPrediction;
