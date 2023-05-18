@@ -12,6 +12,7 @@ function ChatMessage(props) {
       {messageClass == 'sent' && <p>{text}</p>}
       {messageClass == 'received' && text != "<typing>" &&
         <Typed
+        className='typed-text'
         strings={[text]}
         typeSpeed={30}
         showCursor={false}
@@ -19,6 +20,7 @@ function ChatMessage(props) {
         />}
       {messageClass == 'received' && text == "<typing>" &&
         <Typed
+          className='typed-text'
           strings={['&#x2022; &#x2022; &#x2022; &#x2022; &#x2022;']}
           typeSpeed={30}
           loop = {true}

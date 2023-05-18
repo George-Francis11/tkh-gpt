@@ -6,7 +6,7 @@ function App() {
     
     <div className="App">
       <header>
-        <h1>TKH-GPT</h1>
+        <img src = '/logo-no-background.png' />
       </header>
       <section>
         <ChatRoom />

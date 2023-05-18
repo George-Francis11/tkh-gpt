@@ -35,10 +35,8 @@ function ChatRoom() {
       <div className='ChatRoom'>
       <main>
         {messages && messages.length > 0 && messages.map(msg => <ChatMessage msg = {msg} />)}
-        {loading && <ChatMessage msg = {{sender: 'bot', text: "<typing>"}} />
-        }
-      <span ref={dummy}></span>
-
+        {loading && <ChatMessage msg={{ sender: 'bot', text: "<typing>" }} />}
+        <span ref={dummy}></span>
     </main>
 
     <form onSubmit={handleSubmit}>

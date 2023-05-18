@@ -53,7 +53,7 @@ span{
 
 .sent>p{
     color: white;
-    background: #0b93f6 none repeat scroll 0 0;
+    background: #fc6c4c none repeat scroll 0 0;
     border-radius: 10px;
     font-size: 14px;
     margin-right: 1.5rem;
@@ -80,6 +80,7 @@ main {
   flex-direction: column;
   overflow: auto;
   background-color: white;
+  border: transparent;
 }
 
 main::-webkit-scrollbar {
@@ -103,26 +104,27 @@ form {
   height: 10vh;
   position: fixed;
   bottom: 0;
-  background-color: #9b9bcc;
+  background-color: #fa4515;
   width: 100%;
   display: flex;
   font-size: 1.5rem;
+  border: transparent;
 }
 
 form>input {
-  line-height: 1.5;
+  line-height: 1rem;
   width: 100%;
-  font-size: 1.5rem;
-  background: #9b9bcc;
+  font-size: 1.2rem;
+  background: whitesmoke;
   color: black;
   outline: none;
-  border: none;
+  border: transparent;
   padding: 0 10px;
 }
 
 form>button {
   width: 10%;
-  background-color: black;
+  background-color: #fc3404;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -134,7 +136,7 @@ form>button {
 }
 
 form>button:disabled {
-  background-color: grey;
+  background-color: gray;
   cursor: not-allowed;
 }
 
@@ -157,4 +159,35 @@ p {
 ul, li {
   text-align: left;
   list-style: none;
+}
+
+@media only screen and (max-width: 900px) {
+ 
+  
+  .App header img {
+    width: 50%;
+    min-height: 45px;
+    margin-left: 1rem;
+  }
+  .sent>img {
+    display: none;
+  }
+  .received>img {
+    display: none;
+  }
+  .received>span{
+    margin-left: -0.5rem;
+  }
+  .sent>p{
+    margin-right: -0.5rem;
+  }
+
+  form{
+    height: 9vh;
+    border: transparent;
+  }
+
+  form>button {
+    width: 25%;
+  }
 }

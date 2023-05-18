@@ -4,10 +4,10 @@
 }
 
 .App header {
-  background-color: #9b9bcc;
+  color: #fa4515;
   height: 10vh;
   min-height: 50px;
-  color: black;
+  background-color: white;
   width: 100%;
   top: 0;
   display: flex;
@@ -18,6 +18,13 @@
   box-sizing: border-box;
   text-align: center;
   position: fixed;
+}
+
+.App header img {
+  height : 4vh;
+  min-height: 50px;
+  width: 15%;
+  margin-right: 10px;
 }
 
 .App section {
