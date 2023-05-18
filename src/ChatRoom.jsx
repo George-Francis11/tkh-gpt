@@ -19,11 +19,11 @@ function ChatRoom() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    dummy.current.scrollIntoView({ behavior: 'smooth' });
     const usmessage = userMessage.trim();
     setUserMessage('');
     messages.push({ sender: 'user', text: usmessage });
     setLoading(true);
-    dummy.current.scrollIntoView({ behavior: 'smooth' });
     const data = await getPrediction(usmessage);
     var result = data.result;
     messages.push({ sender: 'bot', text: result });
